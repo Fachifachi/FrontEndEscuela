@@ -1,23 +1,22 @@
 import React from "react";
-import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import { HashRouter as Router, Switch, Route } from 'react-router-dom';
 import Home from "../pages/Homejsx";
 import Default from "../pages/Default.jsx";
 import LoginForm from "../pages/LoginFormjsx";
 import PreRegistroForm from "../pages/PreRegistroForm.jsx";
 import VerificarTramiteForm from "../pages/VerificarTramiteFormjsx";
 
-const AppRouter = () => {
+function AppRouter() {
   return (
     <Router>
-      <Switch>
-        <Route exact path="/" component={Home} />
-        <Route path="/default" component={Default} />
-        <Route path="/login" component={LoginForm} />
-        <Route path="/preregistro" component={PreRegistroForm} />
-        <Route path="/verificar" component={VerificarTramiteForm} />
-      </Switch>
+      <Layout>
+        <Switch>
+          <Route exact path="/" component={Home} />
+          <Route component={Default} />
+        </Switch>
+      </Layout>
     </Router>
   );
-};
+}
 
 export default AppRouter;
