@@ -13,6 +13,9 @@ function AppRouter() {
         <Switch>
           <Route exact path="/" component={Home} />
           <Route component={Default} />
+          <Route component={LoginForm} />
+          <Route component={PreRegistroForm} />
+          <Route component={VerificarTramiteForm} />
         </Switch>
       </Layout>
     </Router>
