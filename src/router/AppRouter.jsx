@@ -1,21 +1,20 @@
 import React from "react";
-import {  Routes, Route } from 'react-router-dom';
-import Home from "../pages/Homejsx";
-import Default from "../pages/Default.jsx";
-import LoginForm from "../pages/LoginFormjsx";
-import PreRegistroForm from "../pages/PreRegistroForm.jsx";
-import VerificarTramiteForm from "../pages/VerificarTramiteFormjsx";
+import { Routes, Route } from 'react-router-dom';
+import {Home, Login} from "../pages";
+
 
 function AppRouter() {
   return (
-    <Routes>
-      <Layout>
-    
-          <Route path="/" component={<Layout/>} />
-        
-     
-      </Layout>
-    </Routes>
+
+    <>
+      <Routes>
+        <Route path="/">
+          <Route index element={<Home />} />
+          <Route path="login" element={<Login />} />
+        </Route>
+      </Routes>
+    </>
+
   );
 }
 
