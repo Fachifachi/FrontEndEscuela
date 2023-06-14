@@ -1,10 +1,10 @@
 import React from "react";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
-import Home from "../pages/Home";
-import Default from "../pages/Default";
-import LoginForm from "../pages/LoginForm";
-import PreRegistroForm from "../pages/PreRegistroForm";
-import VerificarTramiteForm from "../pages/VerificarTramiteForm";
+import Home from "../pages/Homejsx";
+import Default from "../pages/Default.jsx";
+import LoginForm from "../pages/LoginFormjsx";
+import PreRegistroForm from "../pages/PreRegistroForm.jsx";
+import VerificarTramiteForm from "../pages/VerificarTramiteFormjsx";
 
 const AppRouter = () => {
   return (
