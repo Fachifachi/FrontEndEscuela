@@ -1,5 +1,5 @@
 import React from "react";
-import { HashRouter as Router, Switch, Route } from 'react-router-dom';
+import {  Routes, Route } from 'react-router-dom';
 import Home from "../pages/Homejsx";
 import Default from "../pages/Default.jsx";
 import LoginForm from "../pages/LoginFormjsx";
@@ -8,17 +8,14 @@ import VerificarTramiteForm from "../pages/VerificarTramiteFormjsx";
 
 function AppRouter() {
   return (
-    <Router>
+    <Routes>
       <Layout>
-        <Switch>
-          <Route exact path="/" component={Home} />
-          <Route component={Default} />
-          <Route component={LoginForm} />
-          <Route component={PreRegistroForm} />
-          <Route component={VerificarTramiteForm} />
-        </Switch>
+    
+          <Route path="/" component={<Layout/>} />
+        
+     
       </Layout>
-    </Router>
+    </Routes>
   );
 }
 
